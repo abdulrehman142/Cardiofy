@@ -5,7 +5,10 @@ import shap
 import numpy as np
 import pandas as pd
 
-from preprocessing import ROOT, get_data_split
+if __package__:
+    from .preprocessing import ROOT, get_data_split
+else:
+    from preprocessing import ROOT, get_data_split
 
 MODEL_DIR = ROOT / "models" / "final"
 
@@ -17,7 +20,7 @@ FEATURE_LABELS = {
     "chol": "Cholesterol",
     "fbs": "Fasting Blood Sugar",
     "restecg": "Resting ECG",
-    "thalach": "Maximum Heart Rate",
+    "thalch": "Maximum Heart Rate",
     "exang": "Exercise-Induced Angina",
     "oldpeak": "ST Depression",
     "slope": "ST Segment Slope",
@@ -138,11 +141,11 @@ class CardiofyExplainer:
                 probability >= self.metadata["threshold"]
             ),
             "base_probability": base_value,
-            "additivity_error": abs(
+            "additivity_error": float(abs(
                 probability
                 - base_value
                 - sum(explanation.values)
-            ),
+            )),
             "contributions": contributions,
             "disclaimer": self.metadata["disclaimer"]
         }

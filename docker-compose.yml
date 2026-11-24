@@ -1,0 +1,60 @@
+
+services:
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+
+    container_name: cardiofy-backend
+
+    environment:
+      DATABASE_PATH: /runtime/cardiofy.db
+      MLFLOW_TRACKING_URI: sqlite:////runtime/mlflow.db
+
+    volumes:
+      - ./runtime:/runtime
+
+    ports:
+      - "127.0.0.1:8000:8000"
+
+    restart: unless-stopped
+
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=8)"
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+
+    networks:
+      - cardiofy-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: /api
+
+    container_name: cardiofy-frontend
+
+    ports:
+      - "127.0.0.1:3000:80"
+
+    depends_on:
+      backend:
+        condition: service_healthy
+
+    restart: unless-stopped
+
+    networks:
+      - cardiofy-network
+
+networks:
+  cardiofy-network:
+    driver: bridge

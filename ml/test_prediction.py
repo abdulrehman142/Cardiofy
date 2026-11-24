@@ -2,7 +2,10 @@ import joblib
 import json
 import pandas as pd
 
-from preprocessing import ROOT
+if __package__:
+    from .preprocessing import ROOT
+else:
+    from preprocessing import ROOT
 
 MODEL_DIR = ROOT / "models/final"
 
@@ -22,7 +25,7 @@ patient = {
     "chol": 240,
     "fbs": 0,
     "restecg": 1,
-    "thalach": 150,
+    "thalch": 150,
     "exang": 0,
     "oldpeak": 1.5,
     "slope": 2,

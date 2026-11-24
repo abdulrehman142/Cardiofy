@@ -1,5 +1,8 @@
 
-from explainability import CardiofyExplainer
+if __package__:
+    from .explainability import CardiofyExplainer
+else:
+    from explainability import CardiofyExplainer
 
 engine = CardiofyExplainer()
 
@@ -11,7 +14,7 @@ patient = {
     "chol": 260,
     "fbs": 1,
     "restecg": 2,
-    "thalach": 125,
+    "thalch": 125,
     "exang": 1,
     "oldpeak": 2.5,
     "slope": 2,

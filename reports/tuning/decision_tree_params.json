@@ -1,0 +1,6 @@
+{
+    "classifier__min_samples_split": 20,
+    "classifier__min_samples_leaf": 8,
+    "classifier__max_depth": 3,
+    "classifier__criterion": "entropy"
+}

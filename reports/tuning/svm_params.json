@@ -1,0 +1,6 @@
+{
+    "classifier__kernel": "rbf",
+    "classifier__gamma": "scale",
+    "classifier__class_weight": null,
+    "classifier__C": 1
+}

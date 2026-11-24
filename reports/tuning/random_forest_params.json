@@ -1,0 +1,8 @@
+{
+    "classifier__n_estimators": 200,
+    "classifier__min_samples_split": 5,
+    "classifier__min_samples_leaf": 2,
+    "classifier__max_features": "log2",
+    "classifier__max_depth": 10,
+    "classifier__class_weight": "balanced"
+}

@@ -1,0 +1,5 @@
+{
+    "classifier__solver": "lbfgs",
+    "classifier__class_weight": null,
+    "classifier__C": 0.1
+}

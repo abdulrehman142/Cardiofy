@@ -1,0 +1,114 @@
+{
+    "model": "SVM",
+    "probability": 0.7094497865251468,
+    "prediction": 1,
+    "base_probability": 0.5428289695476007,
+    "additivity_error": 6.661338147750939e-16,
+    "contributions": [
+        {
+            "feature": "oldpeak",
+            "label": "ST Depression",
+            "value": 1.5,
+            "shap_value": 0.15544764686818055,
+            "impact_percentage_points": 15.544764686818056,
+            "direction": "increase"
+        },
+        {
+            "feature": "chol",
+            "label": "Cholesterol",
+            "value": 240.0,
+            "shap_value": 0.018603972823437696,
+            "impact_percentage_points": 1.8603972823437696,
+            "direction": "increase"
+        },
+        {
+            "feature": "ca",
+            "label": "Major Vessels",
+            "value": 0.0,
+            "shap_value": -0.017829986820428086,
+            "impact_percentage_points": -1.7829986820428085,
+            "direction": "decrease"
+        },
+        {
+            "feature": "age",
+            "label": "Age",
+            "value": 55.0,
+            "shap_value": 0.01692336664863105,
+            "impact_percentage_points": 1.692336664863105,
+            "direction": "increase"
+        },
+        {
+            "feature": "thalch",
+            "label": "thalch",
+            "value": null,
+            "shap_value": -0.005778010565534081,
+            "impact_percentage_points": -0.5778010565534081,
+            "direction": "decrease"
+        },
+        {
+            "feature": "trestbps",
+            "label": "Resting Blood Pressure",
+            "value": 140.0,
+            "shap_value": -0.0007461719767404285,
+            "impact_percentage_points": -0.07461719767404285,
+            "direction": "decrease"
+        },
+        {
+            "feature": "sex",
+            "label": "Sex",
+            "value": 1.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "cp",
+            "label": "Chest Pain Type",
+            "value": 3.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "fbs",
+            "label": "Fasting Blood Sugar",
+            "value": 0.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "restecg",
+            "label": "Resting ECG",
+            "value": 1.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "exang",
+            "label": "Exercise-Induced Angina",
+            "value": 0.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "slope",
+            "label": "ST Segment Slope",
+            "value": 2.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        },
+        {
+            "feature": "thal",
+            "label": "Thallium Test",
+            "value": 3.0,
+            "shap_value": 0.0,
+            "impact_percentage_points": 0.0,
+            "direction": "neutral"
+        }
+    ],
+    "disclaimer": "Experimental prediction system. Not a medical diagnosis."
+}

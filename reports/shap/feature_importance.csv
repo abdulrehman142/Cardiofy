@@ -1,0 +1,14 @@
+feature,mean_abs_shap,label
+thalch,0.11132648397613311,
+oldpeak,0.09651325623687479,ST Depression
+age,0.08289718411784806,Age
+chol,0.035242844041812195,Cholesterol
+ca,0.030076072711345336,Major Vessels
+trestbps,0.010537939646107813,Resting Blood Pressure
+sex,0.0,Sex
+cp,0.0,Chest Pain Type
+fbs,0.0,Fasting Blood Sugar
+restecg,0.0,Resting ECG
+exang,0.0,Exercise-Induced Angina
+slope,0.0,ST Segment Slope
+thal,0.0,Thallium Test
